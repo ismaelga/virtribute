@@ -1,6 +1,6 @@
 # VirtualAttribute
 
-TODO: Write a gem description
+Small DSL for defining virtual attributes.
 
 ## Installation
 
@@ -18,12 +18,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Model
+  include VirtualAttribute::DSL
 
-## Contributing
+  attr_accessor :first_name, :last_name
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+  virtual_attribute :name do
+    read do
+      "#{first_name} #{last_name}"
+    end
+
+    write do |value|
+      self.first_name, self.last_name = value.split
+    end
+  end
+end
+```
