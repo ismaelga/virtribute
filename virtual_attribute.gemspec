@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = VirtualAttribute::VERSION
   gem.authors       = ["Juan Ibiapina"]
   gem.email         = ["juanibiapina@gmail.com"]
-  gem.description   = %q{Virtual attribute DSL}
-  gem.summary       = %q{Virtual attribute DSL}
-  gem.homepage      = ""
+  gem.description   = %q{Small DSL for defining virtual attributes.}
+  gem.summary       = %q{Small DSL for defining virtual attributes.}
+  gem.homepage      = "http://github.com/juanibiapina/virtual_attribute"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
