@@ -6,7 +6,7 @@ Small DSL for defining virtual attributes.
 
 Add this line to your application's Gemfile:
 
-    gem 'virtual_attribute'
+    gem 'virtribute'
 
 And then execute:
 
@@ -14,13 +14,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install virtual_attribute
+    $ gem install virtribute
 
 ## Usage
 
 ```ruby
 class Model
-  include VirtualAttribute::DSL
+  include Virtribute::DSL
 
   attr_accessor :first_name, :last_name
 
