@@ -1,8 +1,8 @@
 require 'active_support'
 
-require 'virtual_attribute/definition'
+require 'virtribute/definition'
 
-module VirtualAttribute
+module Virtribute
   module DSL
     extend ActiveSupport::Concern
 

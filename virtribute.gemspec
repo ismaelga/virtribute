@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'virtual_attribute/version'
+require 'virtribute/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "virtual_attribute"
-  gem.version       = VirtualAttribute::VERSION
+  gem.name          = "virtribute"
+  gem.version       = Virtribute::VERSION
   gem.authors       = ["Juan Ibiapina"]
   gem.email         = ["juanibiapina@gmail.com"]
   gem.description   = %q{Small DSL for defining virtual attributes.}
   gem.summary       = %q{Small DSL for defining virtual attributes.}
-  gem.homepage      = "http://github.com/juanibiapina/virtual_attribute"
+  gem.homepage      = "http://github.com/juanibiapina/virtribute"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

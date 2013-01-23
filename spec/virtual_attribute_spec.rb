@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 class Model
-  include VirtualAttribute::DSL
+  include Virtribute::DSL
 
   attr_accessor :first_name, :last_name
 
@@ -16,7 +16,7 @@ class Model
   end
 end
 
-describe VirtualAttribute do
+describe Virtribute do
   let!(:model) { Model.new }
 
   it 'creates a reader for the attribute' do

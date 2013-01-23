@@ -1,4 +1,4 @@
-module VirtualAttribute
+module Virtribute
   class Definition
     attr_accessor :type, :name
 
