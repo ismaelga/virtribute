@@ -33,5 +33,11 @@ class Model
       self.first_name, self.last_name = value.split
     end
   end
+
+  virtual_attributes :price_a, :price_b do
+    real_attribute_name = "#{name}_int"
+    read { send(real_attribute_name).to_f / 100 }
+    write { |value| send("#{real_attribute_name}=",  (value * 100).to_i) }
+  end
 end
 ```
