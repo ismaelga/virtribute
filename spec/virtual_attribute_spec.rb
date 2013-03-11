@@ -14,6 +14,10 @@ class Model
       self.first_name, self.last_name = value.split
     end
   end
+
+  virtual_attribute :title do
+    read { name.split.map(&:capitalize).join(' ') }
+  end
 end
 
 describe Virtribute do
@@ -31,5 +35,13 @@ describe Virtribute do
 
     model.first_name.should == 'new'
     model.last_name.should == 'name'
+  end
+
+  context 'only read' do
+    it 'does not need a write' do
+      model.first_name = 'first'
+      model.last_name = 'last'
+      model.title.should == 'First Last'
+    end
   end
 end
